@@ -1,12 +1,8 @@
-{
+module.exports = {
   "parser": "babel-eslint",
   "env": {
     "node": true,
     "es6": true
-  },
-  "ecmaFeatures": {
-    "modules": true,
-    "destructuring": true
   },
   "globals": {
   },

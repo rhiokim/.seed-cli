@@ -12,13 +12,13 @@ const initialState = {
 }
 
 const setTracks = (state, action) => {
-  const {tracks} = action
-  return {...state, tracks}
+  const { tracks } = action
+  return { ...state, tracks }
 }
 
 const setPlay = (state, action) => {
-  const {track} = action
-  return {...state, activeTrack: track}
+  const { track } = action
+  return { ...state, activeTrack: track }
 }
 
 export default (state: State = initialState, action: Object): State => {

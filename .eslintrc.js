@@ -11,7 +11,7 @@ module.exports = {
   ],
   "extends": [
     "standard",
-    "standard-flow"
+    "plugin:flowtype/recommended"
   ],
   "settings": {
     "flowtype": {
@@ -19,6 +19,5 @@ module.exports = {
     }
   },
   "rules": {
-    "object-property-newline": "off"
   }
 }

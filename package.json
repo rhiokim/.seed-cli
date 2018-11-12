@@ -21,10 +21,7 @@
     "coverage": "nyc --reporter=json --reporter=lcov --reporter=text mocha",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "commit": "git cz",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1",
-    "precommit": "npm run format && npm run lint && flow",
-    "prepush": "npm test",
-    "commitmsg": "npm run lint:msg"
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1"
   },
   "bin": {
     "seed-cli": "bin/cli.js"
@@ -69,5 +66,12 @@
     "is-blank": "^2.1.0",
     "meow": "^5.0.0",
     "ora": "^3.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "npm run lint:msg",
+      "pre-commit": "npm run format && npm run lint && flow",
+      "pre-push": "npm test"
+    }
   }
 }
